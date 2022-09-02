@@ -1,0 +1,138 @@
+body{
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+*{
+    font-family: sans-serif;
+    font-weight: bold;
+}
+#image{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 10px 7px 20px 0px black;
+    border: 2px solid red;
+}
+header{
+    position: relative;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+header, nav{
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    background-color: red;
+}
+nav a{
+    text-decoration: none;
+    font-size: 4vh;
+    color: black;
+}
+nav div{
+    margin: 0px 50px;
+}
+#image-slider > img{
+    width: 100%;
+    height: 700px;
+}
+#About{
+    width: 100%;
+    height: max-content;
+    background-color: blue;
+    text-align: center;
+    box-shadow: 2px 4px 5px white;
+    padding: 0px 10px 30px 10px;
+}
+#About > p{
+    font-size: 20px;
+    letter-spacing: 3px;
+    word-spacing: 4px;
+}
+h1{
+    padding: 20px;
+    font-size: 30px;
+    text-shadow: 2px 4px 5px white;
+}
+#Product{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+    background-color: green;
+    text-align: center;
+    box-shadow: 2px 4px 5px white;
+    padding:0px 10px 30px 10px;
+}
+#Product img{
+    width: 300px;
+    height: 300px;
+    padding: 20px;
+    border-radius: 10px;
+}
+iframe{
+    margin: 20px;
+    border-radius: 10px;
+}
+#Services{
+    background-color: gray;
+}
+.serve{
+    display: flex;
+}
+.item{
+    width: 50%;
+    height: fit-content;
+    padding: 5px;
+    margin: 5px;
+}
+.itm-one,.itm-two{
+    display: flex;
+}
+.item p{
+    border: 2px solid black;
+    margin: 5px;
+}
+@media screen and (max-width: 1045px) {
+    .tile-structure{
+        display: flex;
+    }
+}
+@media screen and (max-width: 720px) {
+    #Product img,iframe{
+        width: 200px;
+        height: 200px;
+        border-radius: 10px;
+    }
+}
+@media screen and (max-width:482px) {
+    #Product img,iframe{
+        width: 150px;
+        height: 150px;
+    }
+    .item{
+        font-size: 10px;
+    }
+
+}
+@media screen and (max-width:380px) {
+    #Product img,iframe{
+        width: 100px;
+        height: 100px;
+    }
+    .itm-one,.itm-two,.serve{
+        display: block;
+    }
+    .itm-one,.itm-two{
+        width: 200px;
+    }
+    .item{
+        margin: auto;
+    }
+    
+}
+
+
