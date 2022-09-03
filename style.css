@@ -1,5 +1,5 @@
-*{
-    flex-wrap: wrap;
+body{
+    background-color: cornflowerblue;
 }
 header{
     max-width: 100%;
@@ -11,7 +11,7 @@ header{
     right: 0;
     left: 0;
     background-color: red;
-    z-index: 5;
+    z-index: 9999;
 }
 nav,ul{
     display: flex;
@@ -24,12 +24,23 @@ nav,ul{
 li:nth-child(1){
     margin-left: 10%;
 }
+#About,#Services p{
+    padding: 30px;
+    margin: 10px;
+    letter-spacing: 3px;
+    word-spacing: 5px;
+    font-size: 20px;
+}
+h1{
+    text-align: center;
+    font-size: 30px;
+}
 li{
     cursor: pointer;
     list-style: none;
     margin-right: 10%;
 }
-a{
+header a{
     text-decoration: none;
     font-size: 20px;
     color: black;
@@ -42,67 +53,41 @@ header img{
     margin-left: 2%;
     margin-top: 0.4%;
 }
-a:hover{
+header a:hover{
     font-weight: bolder;
 }
-h1{
-    text-align: center;
-    font-size: 40px;
-    padding: 20px;
-}
-p{
-    font-size: 20px;
-    letter-spacing: 3px;
-    word-spacing: 10px;
-    margin: 10px;
-    padding: 10px;
-}
-#image{
-    position: absolute;
-    margin-top: 30px;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 700px;
-    background-color: aqua;
-    z-index: 4;
+#About h1{
+    padding-top: 80px;
 }
 #About{
-    position: absolute;
-    margin-top: 730px;
+    max-width: 100%;
+    width: 100%;
     background-color: blue;
-    left: 0;
-    right: 0;
-    height: 700px;
-    z-index: 3;
+    height: fit-content;
+    box-shadow: 2px 4px 20px 10px blanchedalmond;
+}
+.sec-about{
+    padding: 0px 50px 50px 50px;
 }
 #Product{
-    position: absolute;
-    margin-top: 1430px;
-    left: 0;
-    right: 0;
+    max-width: 100%;
     width: 100%;
-    height: 700px;
-    background-color: chartreuse;
-    z-index: 2;
+    height: fit-content;
+    background-color: green;
+    box-shadow: 2px 4px 20px 10px blanchedalmond;
+}
+#Product h1{
+    padding-top: 80px;
 }
 #Services{
-    position: absolute;
-    background-color: blueviolet;
-    margin-top: 2130px;
-    left: 0;
-    right: 0;
+    max-width: 100%;
+    width: 100%;
+    background-color: gray;
     height: fit-content;
-    z-index: 1;
+    box-shadow: 2px 4px 20px 10px blanchedalmond;
 }
-#footer{
-    background-color: grey;
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin-top: 2853px;
-    height: fit-content;
-    z-index: 0;
+#Services h1{
+    padding-top: 80px;
 }
 .first-block,.second-block{
     display: flex;
@@ -117,20 +102,25 @@ h2{
 #Product img,iframe{
     width: 250px;
     height: 250px;
+    padding: 1%;
     border-radius: 10px;
 }
-.service1{
-    display: flex;
-    flex-flow: row;
-    width: 500px;
-    height: 400px;
-    border: 2px solid black;
-    padding: 20px;
+iframe{
+    padding-bottom: 50px;
 }
 .sec-first,.sec-second{
     margin: 0px 40px 40px 40px;
     max-width: 100%;
     height: auto;
+}
+.service1{
+    display: flex;
+}
+.service1 p{
+    border: 2px solid black;
+}
+#image img{
+    width: 100%;
 }
 .services{
     display: flex;
@@ -140,24 +130,23 @@ h2{
     justify-content: center;
     justify-content: space-between;
 }
-#image img{
+#footer{
+    max-width: 100%;
     width: 100%;
-    height: inherit;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 2px 4px 20px 10px blanchedalmond;
 }
 .first-section{
-    margin-left: 100px;
+    margin-top: 20px;
+    margin-left: 20%;
 }
-.footer{
-    display: flex;
+.second-section{
+    margin-top: 20px;
+    margin-right: 20%;
 }
-h3{
-    text-align: center;
-}
-.first-section,.second-section{
-    width: 500px;
-    height: fit-content;
-}
-@media screen and (max-width:770px) {
+@media screen and (max-width:990px) {
     header{
         width: 60px;
         height: 100%;
@@ -182,7 +171,7 @@ h3{
         margin-right: 1000px;
         margin-left: -15px;
     }
-    a{
+    header a{
         font-size: 17px;
         writing-mode: vertical-rl;
         text-orientation: mixed;
@@ -200,8 +189,97 @@ h3{
         justify-content: space-evenly;
         margin: 10px;
     }
+    #Product img,iframe{
+        width: 200px;
+        height: 200px;
+    }
     .image-section{
         display: flex;
         justify-content: space-around;
+    }
+    #image{
+        display: none;
+    }
+    .services{
+        display: block;
+    }
+    .services p{
+        font-size: 15px;
+    }
+    .service1{
+        display: blockf;
+    }
+    #footer{
+        flex-direction: column-reverse;
+    }
+    #footer img{
+        width: 40px;
+        height: 40px;
+    }
+    .second-section{
+        margin-left: 30px;
+    }
+    .first-section{
+        margin-left: 30px;
+    }
+}
+@media screen and (max-width:500px) {
+    header{
+        width: 60px;
+        height: 100%;
+        display: flex;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        background-color: red;
+        z-index: 9999;
+    }
+    nav,ul{
+        position: absolute;
+    }
+    li:nth-child(1){
+        margin-top: 100px;
+    }
+    li{
+        cursor: pointer;
+        list-style: none;
+    }
+    header a{
+        font-size: 17px;
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+    }
+    header img{
+        margin-top: 10%;
+        margin-left: 7%;
+    }
+    #About,#Services,#Product,#footer{
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+    }
+    #Product img,iframe{
+        width: 150px;
+        height: 150px;
+    }
+    .first-block,.second-block{
+        display: flex;
+        flex-flow: column;
+        justify-content: space-evenly;
+        margin: 10px;
+    }
+    .image-section{
+        display: flex;
+        justify-content: space-around;
+    }
+    .service1 p{
+        font-size: 15px;
+    }
+    .service1{
+        display: block;
+    }
+    #image{
+        display: none;
     }
 }
