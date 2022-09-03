@@ -24,6 +24,10 @@ nav,ul{
 li:nth-child(1){
     margin-left: 10%;
 }
+#Services,#Products,#footer,#image{
+    max-width: 100%;
+    width: 100%;
+}
 #About,#Services p{
     padding: 30px;
     margin: 10px;
@@ -60,8 +64,6 @@ header a:hover{
     padding-top: 80px;
 }
 #About{
-    max-width: 100%;
-    width: 100%;
     background-color: blue;
     height: fit-content;
     box-shadow: 2px 4px 20px 10px blanchedalmond;
@@ -70,8 +72,6 @@ header a:hover{
     padding: 0px 50px 50px 50px;
 }
 #Product{
-    max-width: 100%;
-    width: 100%;
     height: fit-content;
     background-color: green;
     box-shadow: 2px 4px 20px 10px blanchedalmond;
@@ -80,8 +80,6 @@ header a:hover{
     padding-top: 80px;
 }
 #Services{
-    max-width: 100%;
-    width: 100%;
     background-color: gray;
     height: fit-content;
     box-shadow: 2px 4px 20px 10px blanchedalmond;
@@ -120,7 +118,7 @@ iframe{
     border: 2px solid black;
 }
 #image img{
-    width: 100%;
+    width: inherit;
 }
 .services{
     display: flex;
@@ -131,8 +129,6 @@ iframe{
     justify-content: space-between;
 }
 #footer{
-    max-width: 100%;
-    width: 100%;
     height: auto;
     display: flex;
     flex-wrap: wrap;
@@ -180,11 +176,14 @@ iframe{
         margin-top: 10%;
         margin-left: 7%;
     }
-    #About,#Services,#Product,#footer{
+    #Services,#Product,#footer{
         margin-left: 60px;
         max-width: 100%;
         width: 100%;
         height: fit-content;
+    }
+    #About{
+        width: 100%;
     }
     .first-block,.second-block{
         display: flex;
@@ -261,11 +260,14 @@ iframe{
         margin-top: 10%;
         margin-left: 7%;
     }
-    #About,#Services,#Product,#footer{
+    #Services,#Product,#footer{
         margin-left: 60px;
         max-width: 100%;
         width: 100%;
         height: fit-content;
+    }
+    #About{
+        width: 98%;
     }
     .second-block{
         padding-top: 45px;
