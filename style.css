@@ -142,7 +142,7 @@ iframe{
     margin-top: 20px;
     margin-right: 20%;
 }
-@media screen and (max-width:990px) {
+@media screen and (max-width:990px) and (-webkit-min-device-pixel-ratio:0){
     header{
         width: 60px;
         height: 100%;
@@ -228,7 +228,7 @@ iframe{
         margin-left: 30px;
     }
 }
-@media screen and (max-width:500px) {
+@media screen and (max-width:500px) and (-webkit-min-device-pixel-ratio:0) {
     header{
         width: 60px;
         height: 100%;
